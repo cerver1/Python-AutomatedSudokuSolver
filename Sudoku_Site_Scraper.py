@@ -1,5 +1,4 @@
-from Sudoku Url __import__("Sudoku Url")
-'''
+from Sudoku_Url import selected_url
 from selenium import webdriver
 from time import sleep
 import re
@@ -12,13 +11,9 @@ chrome_options.add_argument('--ignore-ssl-errors')
 driver = webdriver.Chrome(chrome_options=chrome_options)
 
 
-def go_to_site(difficulty):
-
+def go_to_site():
     
-    driver.get('https://www.websudoku.com/?level='+ difficulty)
-    sleep(5)
-
-    get_sudoku_board(get_cord_list())
+    driver.get(selected_url())
     
     sleep(2)
     
@@ -46,13 +41,8 @@ def get_sudoku_board(cord_list):
         elif found_cord.get_attribute('@class') == 'd0':
             print('empty')
 
-# request_difficulty_level()
 
-site = driver.get()
-sleep(20)
-'''
-
-
+go_to_site()
 
 # https://www.livesudoku.com/en/sudoku/easy/
 # //td//span[@class = "fixedcell"]

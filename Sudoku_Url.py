@@ -5,20 +5,25 @@ def request_difficulty_level():
     if int(difficulty) not in range(1, 5):
         request_difficulty_level()
     else:
-        return continue_prompt(difficulty)
+        return continue_prompt(int(difficulty))
 
 
-def continue_prompt(difficulty):
+def when_statement(level):
+
     when = {
         1: 'easy',
         2: 'medium',
         3: 'hard',
         4: 'evil'
     }
+    return when.get(level, "something went wrong")
 
-    confirm = str(raw_input("\nYou selected: {}, do you want to continue? (Y\N): ".format(when.get(difficulty))))
+
+def continue_prompt(difficulty):
+
+    confirm = str(input("\nYou selected: {}, do you want to continue? (Y/N): ".format(when_statement(difficulty))))
     if confirm.upper() == "Y":
-        return when.get(difficulty)
+        return when_statement(difficulty)
     elif confirm.upper() == "N":
         request_difficulty_level()
     else:
