@@ -14,32 +14,36 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 def go_to_site():
     
     driver.get(selected_url())
+
+    get_sudoku_board()
     
     sleep(2)
     
 
-def get_cord_list():
 
-    list_of_cords = []
+def get_sudoku_board():
 
-    for i in range(0,89):
-        if len(str(i)) == 1:
-            list_of_cords.append('f0'+ str(i))
-        else:
-            list_of_cords.append('f'+ str(i))
+    filled_cord = driver.find_elements_by_xpath("//td//span[@class = 'fixedcell']")
+    
+    for filled in filled_cord:
+        print(filled.get_attribute("class"))
+        # print(filled.text)
 
-    return list_of_cords
 
-def get_sudoku_board(cord_list):
+def get_cord_position():
 
-    for cord in cord_list:
+    sudoku_board = \
+    [[0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0],
+     [0, 0, 0, 0, 0, 0, 0, 0, 0]]
 
-        found_cord = driver.find_element_by_xpath("//input[@id = \'"+ cord +"\']")
-        
-        if found_cord.get_attribute('@class') == 's0':
-            print('filled')
-        elif found_cord.get_attribute('@class') == 'd0':
-            print('empty')
+
 
 
 go_to_site()
