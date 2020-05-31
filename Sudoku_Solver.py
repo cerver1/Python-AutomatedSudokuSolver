@@ -47,10 +47,13 @@ def validate_position(board, number, position):
                 return False
     return True
 
+def board_solution():
 
-attempt_entry(sudoku_board)
-print('\n+++++++++++++++++++++++++++++++++++++\n')
-for i in sudoku_board:
-    print(i)
+    solved_board = []
 
-print()
+    attempt_entry(sudoku_board)
+    print('\n+++++++++++++++++++++++++++++++++++++\n')
+    for i in sudoku_board:
+        solved_board.append(i)
+
+    return solved_board
