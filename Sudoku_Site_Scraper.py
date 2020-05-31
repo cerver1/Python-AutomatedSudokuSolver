@@ -36,12 +36,11 @@ def get_sudoku_board():
     
     for value in filled_cord_value:
         position_list_value.append(value.text)
+    
+    get_board_position()
 
 
-def get_cord_position():
-
-    for position in position_list:
-        cord_position_column(position)
+def get_board_position():
 
     sudoku_board = \
     [[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -53,6 +52,13 @@ def get_cord_position():
      [0, 0, 0, 0, 0, 0, 0, 0, 0],
      [0, 0, 0, 0, 0, 0, 0, 0, 0],
      [0, 0, 0, 0, 0, 0, 0, 0, 0]]
+
+    for position in position_list:
+        XnY = cord_position_column(int(position))
+        sudoku_board[XnY[0]][XnY[1]] = int(position_list_value[position_list.index(position)])
+    
+    for row in sudoku_board:
+        print(row)
 
 
 def cord_position_column(position):
@@ -141,7 +147,5 @@ class Switch(dict):
 print(when_statement_position(2))
 '''
 go_to_site()
-print(len(position_list))
-print(len(position_list_value))
 # https://www.livesudoku.com/en/sudoku/easy/
 # //td//span[@class = "fixedcell"]
