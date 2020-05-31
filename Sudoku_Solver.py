@@ -1,13 +1,8 @@
-sudoku_board = \
-    [[9, 2, 0, 8, 1, 0, 0, 0, 0],
-     [0, 0, 1, 0, 0, 0, 0, 0, 0],
-     [0, 0, 0, 2, 6, 5, 0, 0, 0],
-     [5, 0, 8, 4, 0, 2, 0, 0, 0],
-     [0, 4, 0, 0, 0, 0, 6, 8, 0],
-     [0, 9, 0, 0, 3, 8, 2, 0, 4],
-     [0, 3, 4, 0, 0, 0, 0, 0, 2],
-     [0, 8, 0, 0, 2, 3, 0, 7, 9],
-     [0, 0, 0, 0, 0, 0, 5, 0, 8]]
+from Sudoku_Site_Scraper import go_to_site
+
+
+
+sudoku_board = go_to_site()
 
 
 def find_empty_locations(board):
@@ -52,14 +47,9 @@ def validate_position(board, number, position):
                 return False
     return True
 
-print()
-
-for i in sudoku_board:
-    print(i)
 
 attempt_entry(sudoku_board)
 print('\n+++++++++++++++++++++++++++++++++++++\n')
-
 for i in sudoku_board:
     print(i)
 

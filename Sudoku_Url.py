@@ -1,3 +1,5 @@
+from time import sleep
+
 def request_difficulty_level():
     difficulty_scale = '\n1 = Easy\n2 = Medium\n3 = Hard\n4 = Evil\n\n'
     difficulty = input("{}Please enter a number that corresponds to a difficulty level: ".format(difficulty_scale))
@@ -32,4 +34,5 @@ def continue_prompt(difficulty):
 
 def selected_url():
     url = "https://www.livesudoku.com/en/sudoku/{}/".format(request_difficulty_level())
+    sleep(2)
     return url

@@ -12,17 +12,12 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 position_list = []
 position_list_value = []
 
-
-
 def go_to_site():
 
     driver.get(selected_url())
 
-    get_sudoku_board()
+    return get_sudoku_board()
     
-    sleep(2)
-    
-
 
 def get_sudoku_board():
 
@@ -37,7 +32,7 @@ def get_sudoku_board():
     for value in filled_cord_value:
         position_list_value.append(value.text)
     
-    get_board_position()
+    return get_board_position()
 
 
 def get_board_position():
@@ -57,8 +52,7 @@ def get_board_position():
         XnY = cord_position_column(int(position))
         sudoku_board[XnY[0]][XnY[1]] = int(position_list_value[position_list.index(position)])
     
-    for row in sudoku_board:
-        print(row)
+    return sudoku_board
 
 
 def cord_position_column(position):
@@ -118,34 +112,3 @@ def cord_position_row(position):
 
 def extract_position(table_cord, prefix):
     return table_cord[table_cord.startswith(prefix) and len(prefix):]
-
-'''
-def when_statement_position(position):
-
-    when_row = Switch({
-
-        range(1,9): "1",
-        range(9,18): 2,
-        range(18,27): 3,
-        range(27,36): 4,
-        range(36,45): 5,
-        range(45,54): 6,
-        range(54,63): 7,
-        range(63,72): 8,
-        range(72,81): 9,
-
-    })
-    return when_row.get(position, "Something went wrong with your position")
-
-class Switch(dict):
-    def __getitem__(self, item):
-        for key in self.keys():                   # iterate over the intervals
-            if item in key:                       # if the argument is part of that interval
-                return super().__getitem__(key)   # return its associated value
-        raise KeyError(item)
-
-print(when_statement_position(2))
-'''
-go_to_site()
-# https://www.livesudoku.com/en/sudoku/easy/
-# //td//span[@class = "fixedcell"]
