@@ -12,7 +12,7 @@ pynput :computer:***
 ***
 	What is it?
 	
-	This project uses python to solve a sudoku board found on https://www.livesudoku.com/
+	This project uses python to solve a random sudoku board found on https://www.livesudoku.com/
 
 	How does it work?
 
@@ -22,7 +22,7 @@ pynput :computer:***
 
 	The drawn board is then passed through a sudoku solver, finally returning a solution 
 
-	This solution is then entered into the (Link - https://www.livesudoku.com/) site with the help of xpath, selenium and pynput.
+	This solution is then entered into the https://www.livesudoku.com/ site with the help of xpath, selenium and pynput.
 
 ***
 
