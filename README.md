@@ -1,90 +1,27 @@
-# **Student Admission**
+# **Automated Sudoku Solver**
 
-### **This program allows the entry of student data; this data is then calculated and graded through a point system. If the student accumulates over 100 points the student is admitted, else the student is denied.**
-
-## ***Pseudocode***
-
-***validateGPA():***
-
-	if GPA.Input is between 2.0 and 4.0 :
-    return Integer(GPA.text) * 20
-	Else: Display Error “Please enter a valid GPA”
-	
-***validateSAT():***
-
-	when(SAT):
-  
-	400..920 -> return 0
-	930..1000 -> return 6
-	1010..1190 -> return 10
-	1200..1350 -> return 11
-	1360..1600 -> return 12
-	Else -> return “Please enter an SAT score between 400..1600”
-	
-***validateHighSchoolQuality():***
-
-	when(Quality):
-  
-	0 -> return 0
-	1 -> return 1
-	2 -> return 4
-	3 -> return 6
-	4 -> return 8
-	5 -> return 10
-	
-***validateDifficultyOfCurriculum():***
-
-	when(Difficulty):
-  
-	-2 -> return -4
-	-1 -> return -2
-	0 -> return 0
-	1 -> return 2
-	2 -> return 4
-	3 -> return 6
-	4 -> return 8
-	Else -> return “Please enter a Difficulty level between -2 and 4”
-	
-***validateGeography():***
-
-	If Geography = State resident : return 10
-	Else return 0
-	
-***validateEssayScore():***
-
-	when(Essay):
-  
-	“Very Good” -> return 1
-	“Excellent” -> return 2
-	“Outstanding” -> return 3
-	Else -> return “Please enter either “Very Good”, “Excellent”, or “ Outstanding”
-	
-***validateMiscellaneous():***
-
-	when(Miscellaneous):
-  
-	“Socioeconomic disadvantage” or “Scholarship athlete” or “Provost’s discretion” -> return 20
-	“Men in nursing” -> return 5
-	Else -> return “Please enter “Socioeconomic disadvantage”, “Scholarship athlete”, “Provost’s discretion” or “Men in nursing””
-	
-***validateAlumni():***
-
-	when(Alumni):
-  
-	“Legacy” -> return 4
-	“Other” -> return 1
-	Else -> return “Please enter “Legacy” or “Other
-	
-*Call all functions. If any function ends up within the Else argument, loop back to allow the
-user to enter accurate information. If all functions are validated add all returned data from each.*
-
-***validateStudent():***
-
-    If returnedData <100 :
-      print(“Congratulations this student is admitted with {returnedData} Points!”)
-    Else:
-      print(“I’m sorry this student has been denied due to {returnedData} Points!”)
+### **Sometimes I get the urge to build projects that remind me of the wonder of coding, projects that don’t solve a pressing issue, projects that allow the exploration of the amazing world of programming.**
 
 ![](Sudoku_1.gif)
-![](Module2.jpg)
-![](Module3.jpg)
+
+## ***Logic***
+
+***
+
+	This project uses python to solve a sudoku board on (Link - https://www.livesudoku.com/).
+
+	This is achieved with the Selenium - webdriver, Time, and pynput libraries.
+
+	How does it work?
+
+	The id tag of all filled sudoku boxes and the values within the boxes are collected with the help of xpath and selenium.
+
+	The id tags and values are used to draw a version of the sudoku board within the script
+
+	The drawn board is then passed through a sudoku solver, finally returning a solution 
+
+	This solution is then entered into the (Link - https://www.livesudoku.com/) site with the help of xpath, selenium and pynput.
+
+***
+***validateSAT():***
+	
