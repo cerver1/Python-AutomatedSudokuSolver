@@ -1,5 +1,6 @@
 from Sudoku_Site_Scraper import driver, position_list
 from Sudoku_Solver import board_solution,pre_solution
+from Sudoku_Keyboard import keyboard_usage
 from selenium import webdriver
 from time import sleep
 import re
@@ -48,6 +49,6 @@ empty.click()
 sleep(2)
 
 attempt = "2"
-empty.send_keys(attempt)
+keyboard_usage(attempt)
 
     
