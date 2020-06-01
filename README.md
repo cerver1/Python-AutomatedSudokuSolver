@@ -23,5 +23,4 @@
 	This solution is then entered into the (Link - https://www.livesudoku.com/) site with the help of xpath, selenium and pynput.
 
 ***
-***validateSAT():***
 	
