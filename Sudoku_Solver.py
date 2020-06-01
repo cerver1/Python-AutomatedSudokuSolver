@@ -6,8 +6,8 @@ sudoku_board = []
 pre_solution = []
 solved_board = []
 
-def get_sudoku_board():
-    for i in go_to_site():
+def get_sudoku_board(generated_board):
+    for i in generated_board:
         sudoku_board.append(i)
 
 
@@ -59,9 +59,9 @@ def validate_position(board, number, position):
                 return False
     return True
 
-def board_solution():
+def board_solution(generated):
 
-    get_sudoku_board()
+    get_sudoku_board(generated)
     find_empty(sudoku_board)
     attempt_entry(sudoku_board)
     print('\n+++++++++++++++++++++++++++++++++++++\n')

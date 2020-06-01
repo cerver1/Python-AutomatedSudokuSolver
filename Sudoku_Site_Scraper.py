@@ -3,26 +3,27 @@ from selenium import webdriver
 from time import sleep
 import re
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument("--disable-notifications")   
-chrome_options.add_argument('--ignore-certificate-errors') # This is to prevent the "Allow notification" dialog box which interferes with the code
-chrome_options.add_argument('--ignore-ssl-errors')
-driver = webdriver.Chrome(chrome_options=chrome_options)
+
 
 position_list = []
 position_list_value = []
-wildcard = []
 
-def go_to_site():
+def go_to_site(url):
 
-    driver.get(selected_url())
+    site = url 
+
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument("--disable-notifications")   
+    chrome_options.add_argument('--ignore-certificate-errors') # This is to prevent the "Allow notification" dialog box which interferes with the code
+    chrome_options.add_argument('--ignore-ssl-errors')
+    driver = webdriver.Chrome(chrome_options=chrome_options)
+
+    driver.get(site)
+
+    return get_sudoku_board(driver)
     
-    wildcard.append(driver.window_handles[0])
 
-    return get_sudoku_board()
-    
-
-def get_sudoku_board():
+def get_sudoku_board(driver):
 
     # empty_cord = driver.find_elements_by_xpath("//td[@class = 'cellnormal']")
     filled_cord = driver.find_elements_by_xpath("//span[@class = 'fixedcell']//parent::td[@class='cellnormal']")
@@ -35,10 +36,10 @@ def get_sudoku_board():
     for value in filled_cord_value:
         position_list_value.append(value.text)
     
-    return get_board_position()
+    return get_board_position(driver)
 
 
-def get_board_position():
+def get_board_position(driver):
 
     sudoku_board = \
     [[0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -55,7 +56,7 @@ def get_board_position():
         XnY = cord_position_column(int(position))
         sudoku_board[XnY[0]][XnY[1]] = int(position_list_value[position_list.index(position)])
     
-    return sudoku_board
+    return sudoku_board, driver
 
 
 def cord_position_column(position):
