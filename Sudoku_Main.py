@@ -9,4 +9,5 @@ empty_board = go_to_site(selected_url())
 # enters the generated board into the sudoku solver algo and returns a solved board
 solved_board = board_solution(empty_board[0])
 
+# enteres the board solution into the site sudoku board
 value_entry(empty_board[1], solved_board)

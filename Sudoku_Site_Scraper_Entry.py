@@ -19,9 +19,6 @@ def board_mapping(board):
     for i in pre_solution:
         solution_list.append(str(mapped_board[i[0]][i[1]]))
 
-    print(solution_list)
-    print(len(solution_list))
-
     # convert positions to integer from string
     for i in position_list:
         my_position_list.append(int(i))
@@ -31,14 +28,9 @@ def board_mapping(board):
         if i not in my_position_list:
             entry_list.append(i)
 
-    print(my_position_list)
-    print(len(my_position_list))
 
     for i in entry_list:
         entry_list_confirm.append('td{}'.format(i))
-
-    print(entry_list_confirm)
-    print(len(entry_list_confirm))
 
 def empty_id(id, driver):
 
