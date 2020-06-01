@@ -85,6 +85,6 @@ user to enter accurate information. If all functions are validated add all retur
     Else:
       print(“I’m sorry this student has been denied due to {returnedData} Points!”)
 
-![](Module1.jpg)
+![](Sudoku_1.gif)
 ![](Module2.jpg)
 ![](Module3.jpg)
