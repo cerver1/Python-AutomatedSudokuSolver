@@ -2,7 +2,13 @@ from Sudoku_Site_Scraper import go_to_site
 
 
 
-sudoku_board = go_to_site()
+sudoku_board = []
+pre_solution = []
+solved_board = []
+
+def get_sudoku_board():
+    for i in go_to_site():
+        sudoku_board.append(i)
 
 
 def find_empty_locations(board):
@@ -12,9 +18,15 @@ def find_empty_locations(board):
                 return board.index(i), i.index(j)
     return ""
 
-# print(find_empty_locations(sudoku_board))
+def find_empty(board):
+
+    for i in board:
+        for j in enumerate(i): 
+            if j[1] == 0:
+                pre_solution.append((board.index(i), j[0])) 
 
 def attempt_entry(board):
+
     position = find_empty_locations(board)
     if position == "":
         return True
@@ -49,8 +61,8 @@ def validate_position(board, number, position):
 
 def board_solution():
 
-    solved_board = []
-
+    get_sudoku_board()
+    find_empty(sudoku_board)
     attempt_entry(sudoku_board)
     print('\n+++++++++++++++++++++++++++++++++++++\n')
     for i in sudoku_board:
