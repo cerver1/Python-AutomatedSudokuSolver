@@ -1,16 +1,18 @@
 # **Automated Sudoku Solver**
 
-### **Sometimes I get the urge to build projects that remind me of the wonder of coding, projects that don’t solve a pressing issue, projects that allow the exploration of the amazing world of programming.**
+### **Certain projects revitalize the urge to build for the sake of building. This project is one, it doesnt solve a pressing issue; this projects simply allow the exploration of the amazing world of programming.**
 
 ![](Sudoku_1.gif)
 
-## ***Logic***
-
+## ***:brain: Logic :brain:***
+***This project contains the following libraries
+Selenium - webdriver :gear:
+Time :clock1:
+pynput :computer:***
 ***
-
-	This project uses python to solve a sudoku board on (Link - https://www.livesudoku.com/).
-
-	This is achieved with the Selenium - webdriver, Time, and pynput libraries.
+	What is it?
+	
+	This project uses python to solve a sudoku board found on https://www.livesudoku.com/
 
 	How does it work?
 
@@ -23,4 +25,7 @@
 	This solution is then entered into the (Link - https://www.livesudoku.com/) site with the help of xpath, selenium and pynput.
 
 ***
+
+
+### **:sun_with_face: Feel free to fork this repository and extend the capabilities of this project! :sun_with_face:**
 	
