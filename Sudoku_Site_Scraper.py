@@ -11,10 +11,13 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 
 position_list = []
 position_list_value = []
+wildcard = []
 
 def go_to_site():
 
     driver.get(selected_url())
+    
+    wildcard.append(driver.window_handles[0])
 
     return get_sudoku_board()
     

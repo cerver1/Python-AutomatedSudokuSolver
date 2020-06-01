@@ -1,7 +1,6 @@
-from Sudoku_Site_Scraper import driver, position_list
+from Sudoku_Site_Scraper import driver, position_list, wildcard
 from Sudoku_Solver import board_solution,pre_solution
 from Sudoku_Keyboard import keyboard_usage
-from selenium import webdriver
 from time import sleep
 import re
 
@@ -16,7 +15,7 @@ for i in board_solution():
     mapped_board.append(i)
     
 for i in pre_solution:
-    solution_list.append(mapped_board[i[0]][i[1]])
+    solution_list.append(str(mapped_board[i[0]][i[1]]))
 
 print(solution_list)
 print(len(solution_list))
@@ -39,16 +38,27 @@ for i in entry_list:
 print(entry_list_confirm)
 print(len(entry_list_confirm))
 
-id = 'td0'
-sleep(2)
-empty = driver.find_element_by_xpath("//td[@id = '{}']".format(id))
-sleep(2)
+def empty_id(id):
 
-empty.click()
+    sleep(0.5)
+    empty = driver.find_element_by_xpath("//td[@id = '{}']".format(id))
+    sleep(0.5)
+    empty.click()
 
-sleep(2)
 
-attempt = "2"
-keyboard_usage(attempt)
+# attempt = "2"
+# keyboard_usage(attempt)
 
-    
+def value_entry():
+
+    sleep(2)
+    driver.set_window_position(0, 0)
+    sleep(1)
+
+    for i in entry_list_confirm:
+        empty_id(i)
+        sleep(0.5)
+        keyboard_usage(solution_list[entry_list_confirm.index(i)])
+
+
+value_entry()
