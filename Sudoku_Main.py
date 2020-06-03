@@ -9,20 +9,14 @@ empty_board = go_to_site(selected_url())
 # enters the generated board into the sudoku solver algo and returns a solved board
 solved_board = board_solution(empty_board[0])
 
-# enteres the board solution into the site sudoku board
+# entries the board solution into the site sudoku board
 value_entry(empty_board[1], solved_board)
-
-
-
-
-
-
 
 ''' 
 To_Do_List
 
 
-1. change relevent to short hand range
+1. change relevant to short hand range
 
 range(0, 9) same as range(9)
 
@@ -42,6 +36,8 @@ out = [i for i in range(9)]
 first value within the bracket is the value to be appended.
 
 3. feature return and store solve time
+
+
 4. integrate lambada functions
 
 '''

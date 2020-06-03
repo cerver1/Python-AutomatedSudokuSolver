@@ -1,5 +1,6 @@
 from time import sleep
 
+
 def request_difficulty_level():
     difficulty_scale = '\n1 = Easy\n2 = Medium\n3 = Hard\n4 = Evil\n\n'
     difficulty = input("{}Please enter a number that corresponds to a difficulty level: ".format(difficulty_scale))
@@ -11,7 +12,6 @@ def request_difficulty_level():
 
 
 def when_statement(level):
-
     when = {
         1: 'easy',
         2: 'medium',
@@ -22,7 +22,6 @@ def when_statement(level):
 
 
 def continue_prompt(difficulty):
-
     confirm = str(input("\nYou selected: {}, do you want to continue? (Y/N): ".format(when_statement(difficulty))))
     if confirm.upper() == "Y":
         return when_statement(difficulty)
