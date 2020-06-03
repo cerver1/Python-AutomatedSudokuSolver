@@ -9,7 +9,9 @@
 * Time :clock1:
 * pynput :computer:
 
+
 ## Project
+
 
 ### What?
 	
@@ -24,6 +26,7 @@
 	The drawn board is then passed through a sudoku solver, finally returning a solution 
 
 	This solution is then entered into the https://www.livesudoku.com/ site with the help of xpath, selenium and pynput.
+	
 	
 ## Getting Started!
 	
