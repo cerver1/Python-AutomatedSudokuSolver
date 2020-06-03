@@ -9,7 +9,7 @@
 * Time :clock1:
 * pynput :computer:
 
-## Logic
+## Project
 
 ### What?
 	
