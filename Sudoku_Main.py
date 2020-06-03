@@ -41,4 +41,7 @@ out = [i for i in range(9)]
 
 first value within the bracket is the value to be appended.
 
+3. feature return and store solve time
+4. integrate lambada functions
+
 '''
