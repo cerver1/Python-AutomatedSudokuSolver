@@ -11,3 +11,34 @@ solved_board = board_solution(empty_board[0])
 
 # enteres the board solution into the site sudoku board
 value_entry(empty_board[1], solved_board)
+
+
+
+
+
+
+
+''' 
+To_Do_List
+
+
+1. change relevent to short hand range
+
+range(0, 9) same as range(9)
+
+
+
+2. change relevant to list comprehension 
+
+list = []
+
+for i in range(9):
+    list.append(i)
+    
+can be changed to 
+
+out = [i for i in range(9)]
+
+first value within the bracket is the value to be appended.
+
+'''

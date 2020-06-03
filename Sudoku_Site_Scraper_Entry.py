@@ -24,7 +24,7 @@ def board_mapping(board):
         my_position_list.append(int(i))
 
 
-    for i in range(0,81):
+    for i in range(81):
         if i not in my_position_list:
             entry_list.append(i)
 
