@@ -4,11 +4,12 @@
 
 ![](Sudoku_1.gif)
 
-## ***:brain: Logic :brain:***
-***This project contains the following libraries
-Selenium - webdriver :gear:
-Time :clock1:
-pynput :computer:***
+## Libraries
+* Selenium - webdriver :gear:
+* Time :clock1:
+* pynput :computer:
+
+## Logic
 ***
 	What is it?
 	
