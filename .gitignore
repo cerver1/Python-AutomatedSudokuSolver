@@ -28,7 +28,7 @@ precommit.hook
 pythonFiles/experimental/ptvsd/**
 pythonFiles/lib/**
 debug_coverage*/**
-languageServer/**
+languageServer/**a
 languageServer.*/**
 bin/**
 obj/**
