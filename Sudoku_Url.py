@@ -33,5 +33,5 @@ def continue_prompt(difficulty):
 
 def selected_url():
     url = "https://www.livesudoku.com/en/sudoku/{}/".format(request_difficulty_level())
-    sleep(2)
+    sleep(1.5)
     return url

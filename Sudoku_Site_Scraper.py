@@ -59,6 +59,8 @@ def get_board_position(driver):
 def cord_position_column(position):
     row = cord_position_row(position)
 
+    sleep(0.5)
+
     column = 9 * (row + 1) - position
 
     if column == 1:

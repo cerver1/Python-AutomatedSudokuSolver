@@ -40,7 +40,7 @@ def empty_id(sqr_id, driver):
 def value_entry(driver, solved):
     board_mapping(solved)
 
-    sleep(2)
+    sleep(1)
     driver.set_window_position(0, 0)
     sleep(1)
 

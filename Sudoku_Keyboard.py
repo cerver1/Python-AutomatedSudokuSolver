@@ -6,6 +6,6 @@ keyboard = Controller()
 
 def keyboard_usage(value):
     keyboard.press(value)
-    sleep(1)
+    sleep(0.5)
     keyboard.release(value)
-    sleep(1)
+    sleep(0.5)
