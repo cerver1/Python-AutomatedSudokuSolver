@@ -18,6 +18,7 @@ def go_to_site(url):
     driver = webdriver.Chrome(chrome_options=chrome_options)
 
     driver.get(site)
+    sleep(0.5)
 
     return get_sudoku_board(driver)
 
@@ -86,6 +87,7 @@ def cord_position_column(position):
 
 
 def cord_position_row(position):
+
     if position in range(1, 9):
         return 0
     elif position in range(9, 18):
