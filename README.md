@@ -1,6 +1,6 @@
 # **Automated Sudoku Solver**
 
-**Certain projects revitalize the urge to build for the sake of building. This project is one, it doesnt solve a pressing issue; this projects simply allow the exploration of the amazing world of programming.**
+**Certain projects revitalize the urge to build for the sake of building. This project is one, it doesnt solve a pressing issue; this project simply allows for the exploration of the amazing world of programming.**
 
 ![](Sudoku_1.gif)
 
