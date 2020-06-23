@@ -1,8 +1,26 @@
-# **Automated Sudoku Solver**
+<h1 align="center">Automated Sudoku Solver</h1>
 
-**Certain projects revitalize the urge to build for the sake of building. This project is one, it doesnt solve a pressing issue; this project simply allows for the exploration of the amazing world of programming.**
+<p align="center">Certain projects revitalize the urge to build for the sake of building. This project is one, it doesnt solve a pressing issue; this project simply allows for the exploration of the amazing world of programming. </p>
 
-![](Sudoku_1.gif)
+<p align="center">
+  
+<p align="center">
+  <img src="https://github.com/cerver1/Python-AutomatedSudokuSolver/blob/master/Sudoku_1.gif" width='100'>
+</p>
+
+<p align="center">⭐️ Star it | 🔱 Fork it on GitHub </p>
+<p align="center">
+  
+<a href="https://github.com/SeleniumHQ/selenium">
+  <img src="https://img.shields.io/badge/built%20with-Selenium-black" />
+</a>
+
+<a href="https://www.python.org/">
+  <img src="https://img.shields.io/badge/built%20with-Python3-blue" />
+</a>
+<p align='center'>
+  <a href='https://github.com/cerver1'><img  src='https://img.shields.io/badge/Coded%20By-Cerve%20-orange'></a>
+</p>
 
 ## Libraries
 * Selenium - webdriver :gear:
