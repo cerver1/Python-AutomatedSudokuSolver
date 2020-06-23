@@ -5,7 +5,7 @@
 <p align="center">
   
 <p align="center">
-  <img src="https://github.com/cerver1/Python-AutomatedSudokuSolver/blob/master/Sudoku_1.gif" width='100'>
+  <img src="https://github.com/cerver1/Python-AutomatedSudokuSolver/blob/master/Sudoku_1.gif" width='500'>
 </p>
 
 <p align="center">⭐️ Star it | 🔱 Fork it on GitHub </p>
