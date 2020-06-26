@@ -15,6 +15,10 @@
   <img src="https://img.shields.io/badge/built%20with-Selenium-black" />
 </a>
 
+<a href="https://pypi.org/project/webdriver-manager/">
+  <img src="https://img.shields.io/badge/built%20with-Webdriver_manager-red" />
+</a>
+
 <a href="https://www.python.org/">
   <img src="https://img.shields.io/badge/built%20with-Python3-blue" />
 </a>
@@ -23,9 +27,9 @@
 </p>
 
 ## Libraries
-* Selenium - webdriver :gear:
+* Selenium :gear:
+* Webdriver Manager :car:
 * Time :clock1:
-* pynput :computer:
 
 
 ## Project
@@ -43,7 +47,7 @@
 
 	The drawn board is then passed through a sudoku solver, finally returning a solution 
 
-	This solution is then entered into the https://www.livesudoku.com/ site with the help of xpath, selenium and pynput.
+	This solution is then entered into the https://www.livesudoku.com/ site with the help of xpath, and selenium.
 	
 	
 ## Getting Started!
@@ -54,5 +58,5 @@
 	- run the projuct from Sudoku_Main.py
 
 
-### **:sun_with_face: Feel free to fork this repository and extend the capabilities of the project! :sun_with_face:**
+<p align ="center">:sun_with_face: Feel free to fork this repository and extend the capabilities of the project! :sun_with_face:</p>
 	
