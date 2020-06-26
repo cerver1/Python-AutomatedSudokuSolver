@@ -52,11 +52,10 @@
 	
 ## Getting Started!
 	
-	- locally install all libraries
-	- ensure libraries are working properly
-	- clone repository
-	- run the projuct from Sudoku_Main.py
-
+	- clone this Repository.
+	- navigate to your cloned repository folder from the cmd and paste "pip install -r requirements.txt".
+	- ensure libraries are working properly (repeat the above should any errors occur).
+	- run the project from the "Sudoku_Main.py" file
 
 <p align ="center">:sun_with_face: Feel free to fork this repository and extend the capabilities of the project! :sun_with_face:</p>
 	
