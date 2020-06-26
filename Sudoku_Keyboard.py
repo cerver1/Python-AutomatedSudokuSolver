@@ -1,11 +1,7 @@
-from pynput.keyboard import Key, Controller
+from selenium.webdriver.common.action_chains import ActionChains
 from time import sleep
 
-keyboard = Controller()
 
+def keyboard_usage(driver, value):
+    ActionChains(driver).key_down(value).pause(0.5).key_up(value).pause(0.5).perform()
 
-def keyboard_usage(value):
-    keyboard.press(value)
-    sleep(0.5)
-    keyboard.release(value)
-    sleep(0.5)

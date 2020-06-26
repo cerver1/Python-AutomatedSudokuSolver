@@ -5,10 +5,15 @@ def request_difficulty_level():
     difficulty_scale = '\n1 = Easy\n2 = Medium\n3 = Hard\n4 = Evil\n\n'
     difficulty = input("{}Please enter a number that corresponds to a difficulty level: ".format(difficulty_scale))
 
-    if int(difficulty) not in range(1, 5):
+    try:
+
+        if int(difficulty) not in range(1, 5):
+            request_difficulty_level()
+        else:
+            return continue_prompt(int(difficulty))
+    except:
+        print('\nPlease enter a valid value\n')
         request_difficulty_level()
-    else:
-        return continue_prompt(int(difficulty))
 
 
 def when_statement(level):

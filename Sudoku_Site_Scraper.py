@@ -1,5 +1,6 @@
 from Sudoku_Url import selected_url
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 import re
 
@@ -9,16 +10,17 @@ position_list_value = []
 
 def go_to_site(url):
     site = url
-
+  
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--disable-notifications")
-    chrome_options.add_argument(
-        '--ignore-certificate-errors')  # This is to prevent the "Allow notification" dialog box which interferes with the code
-    chrome_options.add_argument('--ignore-ssl-errors')
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=chrome_options)
 
-    driver.get(site)
-    sleep(0.5)
+    try:
+        driver.get(site)
+        sleep(0.5)
+    except:
+        driver.get(site)
+        sleep(0.5)
 
     return get_sudoku_board(driver)
 
@@ -88,7 +90,7 @@ def cord_position_column(position):
 
 def cord_position_row(position):
 
-    if position in range(1, 9):
+    if position in range(0, 9):
         return 0
     elif position in range(9, 18):
         return 1

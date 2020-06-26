@@ -47,4 +47,4 @@ def value_entry(driver, solved):
     for i in entry_list_confirm:
         empty_id(i, driver)
         sleep(0.5)
-        keyboard_usage(solution_list[entry_list_confirm.index(i)])
+        keyboard_usage(driver, solution_list[entry_list_confirm.index(i)])
